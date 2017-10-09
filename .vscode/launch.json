@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Program with experimental-modules flag enabled",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "runtimeArgs": ["--experimental-modules"],
+      "envFile": "${workspaceRoot}/.env"
+    },
+    {
+      "name": "Launch with Babel",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/babel/index.js",
+      "preLaunchTask": "build",
+      "stopOnEntry": false,
+      "envFile": "${workspaceFolder}/.env",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "name": "Launch with @std/esm",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/std-esm/index.js",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Launch with mjs extention",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["--experimental-modules"],
+      "program": "${workspaceRoot}/src/mjs-modules/index.mjs",
+      "envFile": "${workspaceRoot}/.env"
+    }
+  ]
+}

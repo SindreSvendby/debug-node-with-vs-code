@@ -1,0 +1,13 @@
+{
+  "name": "debug-in-vs-code",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "babel --presets env src/ -d dist/ --source-maps"
+  },
+  "dependencies": {
+    "@std/esm": "^0.11.2",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}
